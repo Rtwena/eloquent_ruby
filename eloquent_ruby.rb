@@ -65,4 +65,16 @@ module Strings
   class HereDocument
     #Couldn't get this one to work
   end
+
+  class Strip
+    ' hello '.strip #will return 'hello'
+  end
+
+  class Chomp
+    "hello\n".chomp #will return "hello"
+  end
+
+  class Sub
+    'It is warm outside'.sub( 'warm', 'cold') #will return 'It is cold outside'
+  end
 end
