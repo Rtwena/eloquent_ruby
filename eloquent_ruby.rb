@@ -75,6 +75,12 @@ module Strings
   end
 
   class Sub
+    #only subs first word it finds
     'It is warm outside'.sub( 'warm', 'cold') #will return 'It is cold outside'
+  end
+
+  class GSub
+    #will sub all instances of the string
+    'yes yes'.gsub( 'yes', 'no' ) #will return 'no no'
   end
 end
