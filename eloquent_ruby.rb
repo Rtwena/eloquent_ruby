@@ -83,4 +83,10 @@ module Strings
     #will sub all instances of the string
     'yes yes'.gsub( 'yes', 'no' ) #will return 'no no'
   end
+
+  class Split
+    #returns an array with elements of each string
+    'It was a dark and storm night'.split
+    
+  end
 end
