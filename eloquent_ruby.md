@@ -1,6 +1,6 @@
 #Eloquent Ruby
 
-Here are some quick wins achieveable in Ruby from the Eloquent Ruby book!
+Here are some quick wins achievable in Ruby from the Eloquent Ruby book!
 
 ##IfElse
 ```ruby
@@ -47,4 +47,87 @@ Remember, the Ruby convention is that an exclamation point at the end of a metho
 words = %w{ this is a quick way to create an array of strings!}
 words.sort #this will not change the array, but will return a sorted version of it
 words.sort!#this will actually change the array!
+```
+
+##Strings
+###Quote
+Allows for punctuation without the need of escaping (/) you can also use {} or () or <> or [] and any other special characters such as $string in here!$ to avoid conflicts
+```ruby
+  str = %q{"stop", she said, "I can't live without 's and s."}
+  #uppercase Q equates to "" allowing #{foo}
+  foo = 'john'
+  str = %Q{"Hi" he said, "my name is #{foo}. What is your name?"}
+```
+
+###Multi-line
+Able to create strings with a new line by using the return key (becareful of indentations that will equal to whitespace)
+```ruby
+  a_multiline_string = "a multi-line
+  string"
+  puts another_one = %q{another multi-line
+  string}
+```
+
+###Here Document
+Couldn't get this one to work
+```ruby
+heres_one = <<EOF
+This is the beginning of my here document.
+And this is the end.
+EOF
+```
+
+###Strip
+Takes off any whitespace at the start and end of the string
+```ruby
+  ' hello '.strip #will return 'hello'
+```
+
+###Chomp
+Take off the return character at the end of a string (useful for user input)
+```ruby
+  "hello\n".chomp #will return "hello"
+```
+
+###Sub
+Substitute the first instance of a string with another string
+```ruby
+  'It is warm outside'.sub( 'warm', 'cold') #will return 'It is cold outside'
+```
+
+###GSub
+Substitute all instances of a string with another string
+```ruby
+  'yes yes'.gsub( 'yes', 'no' ) #will return 'no no'
+```
+
+###Split
+Returns an array with elements of word as strings
+```ruby
+  'It was a dark and storm night'.split
+  'Bill:Shakespeare:Playwright:Globe'.split( ':' )
+```
+
+###Exlaimation Point
+Will change the original string instead of returning an instance of it
+```
+  title = 'It was a dark and stormy night'
+  title.sub!( 'dark', 'bright' )
+  title.sub!( 'stormy', 'clear' )
+  puts title #'It was a bright and clear night'
+
+```
+
+###Each
+Iterates through a string returning each char
+```ruby
+  author = 'Clarke'
+  author.each_char { |c| puts c }
+```
+
+###Ranges
+Return more then one char in a string using index
+```ruby
+  "abcde"[3] #returns 'd'
+  "abcde"[3..4] #returns 'de'
 ```
