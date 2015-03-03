@@ -21,7 +21,7 @@ module Collections
   end
 
   class MapArray
-    #map block returns a seperate array 'words' array does not get affected
+    #map block returns a separate array 'words' array does not get affected
     words = %w{ this is a quick way to create an array of strings!}
     puts words.map { |word| word.size }
     puts words.map { |word| word.upcase }
@@ -45,5 +45,13 @@ module Collections
 end
 
 module Strings
-  
+  class Quote
+    #allows for punctuation without the need of escaping (/)
+    #you can also use {} or () or <> or [] and any other special characters
+    #such as $string in here!$ to avoid conflicts
+    str = %q{"stop", she said, "I can't live without 's and s."}
+    #uppercase Q equates to "" allowing #{foo}
+    foo = 'john'
+    str = %Q{"Hi" he said, "my name is #{foo}. What is your name?"}
+  end
 end
