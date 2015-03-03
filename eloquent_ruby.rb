@@ -1,4 +1,4 @@
-module EloquentRuby
+module IfElse
   class FancyIfElse
     #fancy if/else
     #if morning is true then 'good morning', else 'good evening'
@@ -6,7 +6,9 @@ module EloquentRuby
     greetings = morning ? 'Good morning!' : 'Good Evening!'
     puts greetings
   end
+end
 
+module Collections
   class QuickStringArray
     words = %w{ this is a quick way to create an array of strings!}
     words.each { |word| puts word }
@@ -40,4 +42,8 @@ module EloquentRuby
   words.sort #this will not change the array, but will return a sorted version of it
   words.sort!#this will actually change the array!
   end
+end
+
+module Strings
+  
 end
