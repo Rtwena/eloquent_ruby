@@ -61,4 +61,8 @@ module Strings
     puts another_one = %q{another multi-line
       string}
   end
+
+  class HereDocument
+    #Couldn't get this one to work
+  end
 end
