@@ -87,6 +87,14 @@ module Strings
   class Split
     #returns an array with elements of each string
     'It was a dark and storm night'.split
-    
+    'Bill:Shakespeare:Playwright:Globe'.split( ':' )
+  end
+
+  class ExclaimationPoint
+    #these will change the original string instead of returning
+    title = 'It was a dark and stormy night'
+    title.sub!( 'dark', 'bright' )
+    title.sub!( 'stormy', 'clear' )
+    puts title #'It was a bright and clear night'
   end
 end
