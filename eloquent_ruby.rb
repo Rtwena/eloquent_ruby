@@ -97,4 +97,9 @@ module Strings
     title.sub!( 'stormy', 'clear' )
     puts title #'It was a bright and clear night'
   end
+
+  class Each
+    author = 'Clarke'
+    author.each_char { |c| puts c }
+  end
 end
