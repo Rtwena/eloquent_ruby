@@ -31,4 +31,13 @@ module EloquentRuby
     words = %w{ this is a quick way to create an array of strings!}
     puts words.inject(0.0){ |result, word| word.size + result }
   end
+
+  class SortArray
+  #Remember, the Ruby convention is that an exclamation point
+  #at the end of a method name indicates that the method is the dangerous or surprising
+  #version of a pair of methods
+  words = %w{ this is a quick way to create an array of strings!}
+  words.sort #this will not change the array, but will return a sorted version of it
+  words.sort!#this will actually change the array!
+  end
 end
