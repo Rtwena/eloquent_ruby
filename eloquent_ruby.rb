@@ -24,4 +24,11 @@ module EloquentRuby
     puts words.map { |word| word.size }
     puts words.map { |word| word.upcase }
   end
+
+  class InjectArray
+    #inject accepts a parameter, the return of inject will be passed into the next
+    #loop until it has ran out of elements
+    words = %w{ this is a quick way to create an array of strings!}
+    puts words.inject(0.0){ |result, word| word.size + result }
+  end
 end
