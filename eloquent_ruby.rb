@@ -9,7 +9,13 @@ module EloquentRuby
   end
 
   class QuickStringArray
-    str_array = %w{ this is a quick way to create an array of strings!}
-    str_array.each { |str| puts str }
+    words = %w{ this is a quick way to create an array of strings!}
+    words.each { |word| puts word }
+  end
+
+  class FindIndex
+    #returns the index at which the 'word' was found
+    word = %w{ this is a quick way to create an array of strings!}
+    puts word.find_index { |this_word| 'create' == this_word}
   end
 end
