@@ -54,4 +54,11 @@ module Strings
     foo = 'john'
     str = %Q{"Hi" he said, "my name is #{foo}. What is your name?"}
   end
+
+  class MultiLine
+    a_multiline_string = "a multi-line
+      string"
+    puts another_one = %q{another multi-line
+      string}
+  end
 end
