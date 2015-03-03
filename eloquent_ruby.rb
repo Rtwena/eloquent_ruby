@@ -102,4 +102,9 @@ module Strings
     author = 'Clarke'
     author.each_char { |c| puts c }
   end
+
+  class Ranges
+    "abcde"[3] #returns 'd'
+    "abcde"[3..4] #returns 'de'
+  end
 end
