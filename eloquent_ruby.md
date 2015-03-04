@@ -21,9 +21,13 @@ Here are some quick wins achievable in Ruby from the Eloquent Ruby book!
 ###Find Index
 Returns the index at which the 'word' was found
 ```ruby
-  returns the index at which the 'word' was found
   words = %w{ this is a quick way to create an array of strings!}
+
+  words.index( "quick" ) #returns 3
   puts words.find_index { |this_word| 'create' == this_word}
+
+  int_array = [1,2,3,4,5,6]
+  int_array.index(3) #returns 2 (it's index!)
 ```
 
 ###Map
